@@ -59,7 +59,7 @@ function maxCharacter(str) {
 
   console.log(charMap);
 }
-maxCharacter('javascript');
+maxCharacter('aprajanagyja');
 
 // CHALLENGE 6: FIZZBUZZ
 // Write a program that prints all the numbers from 1 to 100.
