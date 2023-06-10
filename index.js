@@ -24,6 +24,20 @@ console.log(isPalindrome('heal'));
 // ex. reverseInt(521) === 125
 
 function reverseInt(int) {
-  return String(int).split('').reverse().join('');
+  return parseInt(String(int).split('').reverse().join('')) * Math.sign(int);
 }
-console.log(reverseInt(521));
+console.log(reverseInt(1025445));
+
+// CHALLENGE 4: CAPITALIZE LETTERS
+// Return a string with the first letter of every word capitalized
+// ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
+
+function capitalizeLetters(str) {
+  const words = str.split(' ');
+
+  const strArr = words.map((word) => {
+    return word[0].toUpperCase() + word.slice(1).toLowerCase();
+  });
+  return strArr.join(' ');
+}
+console.log(capitalizeLetters('i love javascript'));
