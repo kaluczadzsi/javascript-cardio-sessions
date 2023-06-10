@@ -27,5 +27,28 @@ function longestWord(sen) {
     return longestWordArray;
   }
 }
-
 console.log(longestWord('Hello there, my name is Brad'));
+
+// CHALLENGE 2: ARRAY CHUNKING
+// Split an array into chunked arrays of a specific length
+// ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3],[4, 5, 6],[7]]
+// ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
+function chunkArray(array, len) {
+  // init chunked array
+  const chunkedArr = [];
+  // set index
+  let i = 0;
+
+  // loop while index is less then array length
+  while (i < array.length) {
+    // slice out from the index to index + chunk length
+    // and push on to the chunk array
+    chunkedArr.push(array.slice(i, i + len));
+    // increment by chunk length
+    i += len;
+  }
+
+  return chunkedArr;
+}
+
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 4));
