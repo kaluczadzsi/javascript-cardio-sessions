@@ -41,3 +41,22 @@ function capitalizeLetters(str) {
   return strArr.join(' ');
 }
 console.log(capitalizeLetters('i love javascript'));
+
+// CHALLENGE 5: MAX CHARACTER
+// Return the character that is most common in a string
+// ex. maxCharacter('javascript') === 'a'
+
+function maxCharacter(str) {
+  const charMap = {};
+
+  str.split('').forEach((char) => {
+    if (charMap[char]) {
+      charMap[char]++;
+    } else {
+      charMap[char] = 1;
+    }
+  });
+
+  console.log(charMap);
+}
+maxCharacter('javascript');
