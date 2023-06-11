@@ -40,3 +40,23 @@ function sortActiveUsersByAge(users) {
 }
 
 console.log(sortActiveUsersByAge(users));
+
+// What will be logged in first example and in a second example?
+
+// let var1;
+// console.log(var1);
+// console.log(typeof var1);
+
+// let var2 = null;
+// console.log(var2);
+// console.log(typeof var2);
+
+// console.log(foo);
+// foo = 1;
+
+// console.log(foo);
+// var foo = 2;
+
+// foo = 3;
+// console.log(foo);
+// var foo;
