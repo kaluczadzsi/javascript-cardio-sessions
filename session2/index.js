@@ -83,9 +83,19 @@ function formatStr(str) {
 // Z should turn to A
 // ex. 'hello there' === 'Ifmmp UIfsf'
 
-function letterChanges(str) {}
+function letterChanges(str) {
+  let newStr = str.replace(/[a-z]/gi, function (char) {
+    if (char === 'z' || char === 'Z') {
+      return 'a';
+    } else {
+      return String.fromCharCode(char.charCodeAt() + 1);
+    }
+  });
+
+  return newStr;
+}
 
 // Call Function
-const output = isAnagram('elbow', 'belows');
+const output = letterChanges('Hello Therez');
 
 console.log(output);
